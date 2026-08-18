@@ -23,6 +23,7 @@ from sqlmodel import Field, Session, SQLModel, create_engine, select, func
 DATABASE_FILE = "tasks.db"
 DATABASE_URL = f"sqlite:///{DATABASE_FILE}"
 
+
 # check_same_thread=False is needed because FastAPI can use the connection
 # from more than one thread in dev mode; SQLModel/SQLAlchemy handles the
 # actual thread-safety for us via the session.
